@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .style-name{
+
+
+            padding: 15px;
+            width: 20%;
+            background-color: beige;
+            box-shadow: 2px 2px 5px white;
+            border-radius: 30px;
+        }
+        .style-email{
+
+
+            padding: 15px;
+            width: 20%;
+            background-color: beige;
+            box-shadow: 2px 2px 5px white;
+            border-radius: 30px;
+        }
+
+        .style-number{
+
+
+            padding: 15px;
+            width: 20%;
+            background-color: beige;
+            box-shadow: 2px 2px 5px white;
+            border-radius: 30px;
+        }
+
+        .number{
+
+
+            padding: 50px;
+        }
+
+        
+
+
+
+    </style>
+    
+</head>
+
+
+    
+
+<body>
+    
+
+    <form action=""  class="number">
+        <h1>Please fill the Required information</h1>
+
+        <input type="text" class="style-name" placeholder="enter your name" id="handleName" required><br><br>
+        <input type="email" class="style-email" placeholder="enter your email"  id="handleEmail" required><br><br>
+        <input type="number"  class="style-number" placeholder="enter your telephone number" 
+        id="handleNumber" onchange='(event)=>event.target.event'><br><br>
+
+        <button  style="padding: 20px; border-radius: 100px; cursor: pointer;" onclick="handleClick()" >submit</button>
+    
+    
+    </form>
+
+    <script>
+
+        function handleClick(){
+
+          let handleEmail = document.getElementById('handleEmail').value;
+          let handleNumber = document.getElementById('handleNumber').value;
+          let handleName = document.getElementById('handleName').value
+
+          if(handleEmail && handleName && handleNumber !== ""){
+
+            alert('form submitted')
+          }else{
+
+            alert('please youre not allowed to submit form with some empty value')
+          }
+
+
+
+
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
