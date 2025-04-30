@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Curriculum Vitae - Bazayesu Didier</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+
+    .container:hover {
+      box-shadow: 0 0 18px rgba(0, 102, 204, 0.3);
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      color: #004080;
+    }
+
+    hr {
+      border: none;
+      height: 3px;
+      background: linear-gradient(to right, blue, grey);
+      margin: 25px 0;
+    }
+
+    .photo {
+      display: block;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      border: 3px solid #007BFF;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .photo:hover {
+      transform: scale(1.05);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    table:hover {
+      background-color: #f0f8ff;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #e6f0ff;
+      color: #003366;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    ul {
+      list-style: square;
+      padding-left: 20px;
+    }
+
+    li:hover {
+      color: #007BFF;
+      cursor: pointer;
+    }
+
+    .section {
+      margin-bottom: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .section:hover {
+      background-color: #f0f8ff;
+    }
+
+    .signature {
+      margin-top: 40px;
+    }
+
+    .signature p:hover {
+      color: #0056b3;
+    }
+
+    .toggle-btn {
+      cursor: pointer;
+      color: #004080;
+      text-decoration: underline;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Scroll to Top Button */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.3s;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Contact Button */
+    #contactBtn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    #contactBtn:hover {
+      background-color: #218838;
+    }
+
+    #contactInfo {
+      display: none;
+      margin-top: 10px;
+      font-size: 18px;
+      color: #28a745;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Curriculum Vitae</h1>
+    <img src="cv.jpeg.jpg" alt="Bazayesu Didier's Photo" class="photo">
+    <h3>Bazayesu Didier</h3>
+
+    <hr>
+
+    <div class="section" onclick="toggleSection('personalIdentification')">
+      <h2>1. Personal Identification (Click to Toggle)</h2>
+      <div id="personalIdentification" class="hidden">
+        <p><strong>First Name:</strong> Bazayesu</p>
+        <p><strong>Last Name:</strong> Didier</p>
+        <p><strong>Date of Birth:</strong> 20th April 2004</p>
+        <p><strong>Marital Status:</strong> Single</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="section" onclick="toggleSection('birth')">
+      <h2>2. Place of Birth (Click to Toggle)</h2>
+      <div id="birth" class="hidden">
+        <p><strong>Country:</strong> Rwanda</p>
+        <p><strong>Province:</strong> Eastern</p>
+        <p><strong>District:</strong> Rwamagana</p>
+        <p><strong>Sector:</strong> Rubona</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="section" onclick="toggleSection('residence')">
+      <h2>3. Place of Residence (Click to Toggle)</h2>
+      <div id="residence" class="hidden">
+        <p><strong>Country:</strong> Rwanda</p>
+        <p><strong>Province:</strong> Eastern</p>
+        <p><strong>District:</strong> Rulindo</p>
+        <p><strong>Sector:</strong> Tumba</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="section" onclick="toggleSection('education')">
+      <h2>4. Educational Background (Click to Toggle)</h2>
+      <div id="education" class="hidden">
+        <table>
+          <tr>
+            <th>Year</th>
+            <th>School</th>
+            <th>Certificate</th>
+          </tr>
+          <tr>
+            <td>2009 - 2016</td>
+            <td>Groupe Scolaire NAWE </td>
+            <td>Primary Level Certificate</td>
+          </tr>
+          <tr>
+            <td>2017 - 2019</td>
+            <td>Groupe Scolaire NAWE</td>
+            <td>O'Level Certificate</td>
+          </tr>
+          <tr>
+            <td>2020 - 2023</td>
+            <td>APPEGA GAHENGERI TVET</td>
+            <td>A2 Certificate in Software Development</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="section" onclick="toggleSection('skills')">
+      <h2>5. My Skills (Click to Toggle)</h2>
+      <div id="skills" class="hidden">
+        <ul>
+          <li>JavaScript</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="section" onclick="toggleSection('testimony')">
+      <h2>6. Testimony (Click to Toggle)</h2>
+      <div id="testimony" class="hidden">
+        <p>
+          I, undersigned, certify that the above provided information is honest and true to the best of my knowledge.
+          I understand that false information may be grounds for not being hired and for immediate termination
+          of employment at any point in the future if I am hired. I authorize the verification of any or all information listed above.
+        </p>
+      </div>
+    </div>
+
+    <div class="signature">
+      <p><strong>Signature:</strong> ____________________________</p>
+      <p><strong>Date:</strong> ____________________</p>
+    </div>
+
+    
+    <button id="contactBtn" onclick="showContactInfo()">Contact</button>
+    <div id="contactInfo">
+      <p>Phone Number: <strong>+250 700 213 746</strong></p>
+      <p>Email: <strong>didierbazayesu@gmail.com</strong></p>
+      <p>Website: <strong><a href="http://www.dvcb.com" target="_blank">www.dvcb.com</a></strong></p>
+    </div>
+
+   
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+  </div>
+
+  <script>
+    
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      if (section.classList.contains("hidden")) {
+        section.classList.remove("hidden");
+      } else {
+        section.classList.add("hidden");
+      }
+    }
+
+    
+    function showContactInfo() {
+      const contactInfo = document.getElementById("contactInfo");
+      contactInfo.style.display = contactInfo.style.display === "block" ? "none" : "block";
+    }
+
+    
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    window.onscroll = function() {
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
